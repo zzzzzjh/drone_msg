@@ -1,2 +1,1 @@
-# drone_msg
-messages for drone
+# Messages for drone
