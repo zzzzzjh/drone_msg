@@ -23,10 +23,10 @@ uint8 User_Mode1=9
 ## 控制参考量 
 uint8 swarm_shape
 
-uint8 One_column=0
-uint8 Triangle=1
-uint8 Square=2
-uint8 Circular=3
+uint8 Fully_Connected=0
+uint8 Ring_Connected=1
+uint8 Sensor_Connected=2
+uint8 Change_Connected=3
 
 ## 默认为 XYZ位置追踪模式 （sub_mode = 0）； 速度追踪启用时，控制器不考虑位置参考量及位置状态反馈
 uint8 Move_mode
@@ -39,9 +39,13 @@ uint8 XYZ_ACC = 4
 uint8 TRAJECTORY   = 5 
 
 
-float32 swarm_size
+float32 range
 
+float32[3] direction          ## [m]
 float32[3] position_ref          ## [m]
 float32[3] velocity_ref          ## [m]
 float32 yaw_ref                  ## [rad]
 
+uint8 connect_flag
+uint8 agent1
+uint8 agent2
